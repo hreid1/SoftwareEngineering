@@ -3,7 +3,7 @@
 
 class Rect
 {
-//Private section - only class Rect member functions can access these
+    //Private section - only class Rect member functions can access these
 private:
     float width;
     float height;
@@ -29,6 +29,14 @@ public:
         }
     }
 
+    //Setter for Width
+    void setWidth(float w) {
+        if (width != w) {
+            width = w;
+            updateArea();
+        }
+    }
+
     //Getter
     double getArea() {
         return area;
@@ -40,8 +48,4 @@ public:
     }
 
 };
-
-
-
-
 
