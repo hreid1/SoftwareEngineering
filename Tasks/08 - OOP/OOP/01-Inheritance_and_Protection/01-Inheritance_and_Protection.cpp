@@ -27,6 +27,18 @@ public:
         //Read only copy returned as = does a copy for string
         return _name;
     }
+    
+    void setAge(int newAge) {
+        if ((newAge >= 0) && (newAge <= 30)) 
+        {
+            cout << "The age for " << _name << " has changed from " << _age << " to " << newAge << endl;
+            _age = newAge;
+        }
+    }
+
+    int getAge() {
+        return _age;
+    }
 };
 
 
@@ -67,4 +79,6 @@ int main()
     Pet p1("Carrot", 2);
     Dog d1("Scrapper", 5);
     Cat c1("Furry", 3);
+
+    c1.setAge(4);
 }
